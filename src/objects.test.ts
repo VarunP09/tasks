@@ -25,7 +25,7 @@ const { BLANK_QUESTIONS, SIMPLE_QUESTIONS }: Record<string, Question[]> =
 // We have backup versions of the data to make sure all changes are immutable
 const {
     BLANK_QUESTIONS: BACKUP_BLANK_QUESTIONS,
-    SIMPLE_QUESTIONS: BACKUP_SIMPLE_QUESTIONS,
+    SIMPLE_QUESTIONS: BACKUP_SIMPLE_QUESTIONS
 }: Record<string, Question[]> = backupQuestionData as Record<
     string,
     Question[]
@@ -38,7 +38,7 @@ const [
     BACKUP_ADDITION_QUESTION,
     BACKUP_LETTER_QUESTION,
     BACKUP_COLOR_QUESTION,
-    BACKUP_SHAPE_QUESTION,
+    BACKUP_SHAPE_QUESTION
 ] = BACKUP_SIMPLE_QUESTIONS;
 
 ////////////////////////////////////////////
@@ -48,19 +48,15 @@ describe("Testing the object functions", () => {
     //////////////////////////////////
     // makeBlankQuestion
 
-    test("(3 pts) Testing the makeBlankQuestion function", () => {
+    test("Testing the makeBlankQuestion function", () => {
         expect(
-            makeBlankQuestion(1, "Question 1", "multiple_choice_question"),
+            makeBlankQuestion(1, "Question 1", "multiple_choice_question")
         ).toEqual(BLANK_QUESTIONS[0]);
         expect(
-            makeBlankQuestion(
-                47,
-                "My New Question",
-                "multiple_choice_question",
-            ),
+            makeBlankQuestion(47, "My New Question", "multiple_choice_question")
         ).toEqual(BLANK_QUESTIONS[1]);
         expect(
-            makeBlankQuestion(2, "Question 2", "short_answer_question"),
+            makeBlankQuestion(2, "Question 2", "short_answer_question")
         ).toEqual(BLANK_QUESTIONS[2]);
     });
 
