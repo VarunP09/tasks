@@ -19,7 +19,7 @@ function App(): React.JSX.Element {
                 <strong>Varun Pappu</strong>
             </header>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
